@@ -12,6 +12,20 @@ class Pessoa
 
             (dados_obtidos se torna True se dados obtidos com sucesso)
 """
+try:
+    import sys
+    import os
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../src'
+            )
+        )
+    )
+except ImportError:
+    raise ImportError
 import unittest
 from pessoa import Pessoa
 from unittest.mock import patch
